@@ -29,12 +29,94 @@ ul li{
 
   .section {
       position: absolute;
-      top: 337px;
+      top: 500px;
+
+      width: 100%;
+ 
+      
   }
+/*.background {
+      
+      background-image: url("—Pngtree—vintage floral background_3740950.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+
+  } */
 
   .col img {
       width: 100%;
       height:100%;
       padding: 0px;
+      border-radius: 50% 20% / 10% 40%;
   }
 
+  .col img:hover {
+    opacity: 0.7;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  
+.col:hover .middle {
+    opacity: 1;
+  }
+
+.text {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
+  }
+
+  .text:hover {
+      color: orange;
+      cursor: pointer;
+  }
+
+.customtext {
+    margin-top: 100px;
+    margin-left: 15%;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contactbtn {
+    margin-top: 20px;
+    margin-left: 35%;
+    margin-bottom: 10%;
+}
+
+.bouton {
+    border: 2px solid #284243;
+    border-radius: 30px;
+    padding:10px 20px 10px 20px;
+    margin-left: 30px;
+}
+
+a .bouton {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bouton:hover {
+    background-color: #284243;
+    color: white;
+    transition: .5s ease;
+
+}
+
+.detail div {
+    width:970px;
+    height:600px;
+    margin-left: 10%;
+    background-color: #284243;
+}
