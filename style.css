@@ -40,6 +40,19 @@ ul li{
       
   }
 
+  .div-form {
+    position: absolute;
+    width: 100%;
+    right: 300px;
+}
+
+.col-4 img {
+    height: 450px;
+    width: 100%;
+}
+
+
+
   .col.shop img{
       width: 100%;
       height:100%;

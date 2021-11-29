@@ -33,62 +33,53 @@
         </header>
 
         <section class="section">
-            <div class="background">
-              <div class="container">
-                
-                
+              <div class="container">  
                 <div class="row">
-                  <div class="detail">
-                    <div>
-                      <img src="FIELD-STUDIO.png" style="width: 250px;height: 250px;margin-left: 360px;"><br>
-                      
-                        
-                          <div class="container">
-                            <div class="row">
-                      
-                              <div class="col-lg-4 col-md-6 ">
-                                <div>
-                                <h4>Our Social Media</h4><br>
-                                  
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-youtube"></a>
-                                <a href="#" class="fa fa-instagram"></a>
-
-                                  
-                                </div>
-                              </div>
-                      
-                              <div class="col-lg-4 col-md-6 ">
-                                <h4>Our Mission</h4>
-                                <p><br>
-                                  Whether you are looking for antiques & vintage items without equal, props for rent, or just a fun day experiencing the quirkiness that is Vevay Vintage Prop & Shop, we have you covered.
-                                  </p>
-                              </div>
-                      
-                              <div class="col-lg-4 col-md-6 ">
-                                <h4>We are open</h4>
-                                <p><br>
-                                  Sunday - Thursday: 11:00 AM – 4:00 PM
-                                  Friday & Saturday: 10:00 AM – 6:00 PM
-                                  Private Shopping By Appointment<br>
-                                  Schedule Your Private Shopping Experience.<br><br>Adresse:<br>110 East Main Street / PO Box 17
-
-                                  Vevay, IN 47043
-                                  </p>
-                              </div>
-                      
-                            </div>
-                          </div>
-                        </div>
-                      
-
+                   <div class="col-8"><h2>Happy Shopping!</h2></div>
+                    <div class="div-form">
+                        <form>
+                            <label>Select your desired products (max 3):</label>
+                            <select id="produits" name="produits">
+                              <option value="prod1">1979s Authentic Vintage Typerwirter</option>
+                              <option value="prod2">Mid Century Suitcase Coffee Table</option>
+                              <option value="prod3">Mid Century Maple Wood Chair</option>
+                              <option value="prod4">1920s Authentic Vintage Telephone</option>
+                              <option value="prod5">Retro Camera from the early</option>
+                              <option value="prod6">Vintage Globe </option>
+                              <option value="prod7">80s 90s Retro Radio</option>
+                              <option value="prod8">Vintage Record Player</option>
+                              <option value="prod9">Vintage Eco Friendly HandBag</option>
+                            </select>
+                            <label>Quantity (max 2 per product):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="number" name="quantity">
+                            <button type="submit" class="btn buy" role="button">Add</button>
+                            <p>Payment method :</p>
+                            <input type="radio" id="card" name="payment" value="card"checked>
+                            <label for="card">CreditCard <p style="font-size: 10px;">(total price less than 1000 $)</p></label>
+                            <input type="radio" id="cash" name="payment" value="cash">
+                            <label for="cash">Cash <p style="font-size: 10px;">(total price less than 2000 $)</p></label>
+                            <p>Please type your address :</p>
+                            <input type="text" id="address-cmd" name="address" required>
+                            <p>Please enter your email :</p>
+                            <input type="email" id="email-cmd" name="email" required>
+                            <p>Please enter your phone number :</p>
+                            <input type="number" id="number-cmd" name="number" required>
+                        </form>  
+                      </div>
+                    
+                    <div class="col-4">
+                        <img src="passecmd.jpg">
+                        <br><a href="merci.html" class="btn buy" role="button" style="position: relative;top: 20px;left: 110px;">Confirm purchase</a></div>
                     </div>
-                  </div>
-                </div>
-                
+                    <div class="row">
+                        <h2 style="position: relative;bottom: 25px;">Your shopping cart has the following : </h2>
+                        <ul>
+                            <li></li>
+                        </ul></div>
+                     
     
               </div>
-              </div>
+           
         </section>
 
         
