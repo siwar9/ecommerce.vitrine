@@ -12,6 +12,25 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900|Open+Sans:300,400,600,700,800" rel="stylesheet">
 
+        <script lang="JavaScript">
+            function ajouterProd() {
+                var v1 = document.form2.produits.value;
+                var v2 = document.form2.quantity.value;
+                var test = 1;
+                if (v2 >2){
+                    test=-1;
+                }
+                if (test==-1) {
+                    alert("Vous ne pouvez pas commander plus que 2 articles par produit."); return false;
+                }
+                var node = document.createElement("li"); 
+                var textnode = document.createTextNode(v1+" x "+v2);
+                node.appendChild(textnode);
+                document.getElementById("maliste").appendChild(node);
+
+            }
+        </script>
+
     </head>
     <body>
         <header>
@@ -37,22 +56,22 @@
                 <div class="row">
                    <div class="col-8"><h2>Happy Shopping!</h2></div>
                     <div class="div-form">
-                        <form>
+                        <form name="form2" action="merci.html" method="post" id="cmd_form">
                             <label>Select your desired products (max 3):</label>
                             <select id="produits" name="produits">
-                              <option value="prod1">1979s Authentic Vintage Typerwirter</option>
-                              <option value="prod2">Mid Century Suitcase Coffee Table</option>
-                              <option value="prod3">Mid Century Maple Wood Chair</option>
-                              <option value="prod4">1920s Authentic Vintage Telephone</option>
-                              <option value="prod5">Retro Camera from the early</option>
-                              <option value="prod6">Vintage Globe </option>
-                              <option value="prod7">80s 90s Retro Radio</option>
-                              <option value="prod8">Vintage Record Player</option>
-                              <option value="prod9">Vintage Eco Friendly HandBag</option>
+                              <option value="1979s Authentic Vintage Typerwirter">1979s Authentic Vintage Typerwirter</option>
+                              <option value="Mid Century Suitcase Coffee Table">Mid Century Suitcase Coffee Table</option>
+                              <option value="Mid Century Maple Wood Chair">Mid Century Maple Wood Chair</option>
+                              <option value="1920s Authentic Vintage Telephone">1920s Authentic Vintage Telephone</option>
+                              <option value="Retro Camera from the early">Retro Camera from the early</option>
+                              <option value="Vintage Globe">Vintage Globe </option>
+                              <option value="80s 90s Retro Radio">80s 90s Retro Radio</option>
+                              <option value="Vintage Record Player">Vintage Record Player</option>
+                              <option value="Vintage Eco Friendly HandBag">Vintage Eco Friendly HandBag</option>
                             </select>
                             <label>Quantity (max 2 per product):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                             <input type="number" name="quantity">
-                            <button type="submit" class="btn buy" role="button">Add</button>
+                            <button type="submit" class="btn buy" role="button" onclick="return ajouterProd()">Add</button>
                             <p>Payment method :</p>
                             <input type="radio" id="card" name="payment" value="card"checked>
                             <label for="card">CreditCard <p style="font-size: 10px;">(total price less than 1000 $)</p></label>
@@ -72,13 +91,15 @@
                         <br><a href="merci.html" class="btn buy" role="button" style="position: relative;top: 20px;left: 110px;">Confirm purchase</a></div>
                     </div>
                     <div class="row">
-                        <h2 style="position: relative;bottom: 25px;">Your shopping cart has the following : </h2>
-                        <ul>
-                            <li></li>
-                        </ul></div>
-                     
-    
-              </div>
+                        <h2 style="position: relative;bottom: 25px;">Your shopping cart has the following products: </h2>
+           
+                    </div>
+                    <ol id="maliste">
+                    </ol>
+                    <div id="price">
+                        <p>Total price is: 0 $</p>
+                    </div>
+                    
            
         </section>
 
